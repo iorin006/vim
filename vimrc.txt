@@ -1,0 +1,39 @@
+" 基本設定
+set nocompatible        " 互換モードを無効にする
+set encoding=utf-8      " ファイルエンコーディングをUTF-8に設定
+set fileencoding=utf-8  " 保存時のエンコーディングをUTF-8に設定
+set fileencodings=utf-8,cp932,euc-jp,sjis " 読み込み時のエンコーディング候補
+set fileformats=unix,dos,mac " ファイルフォーマットを設定
+set ambiwidth=double    " 全角文字の幅を2に設定
+set backspace=indent,eol,start " バックスペースキーの挙動を設定
+set clipboard=unnamed,unnamedplus " システムクリップボードと共有
+set autoindent                " 新しい行で現在の行のインデントをコピーする
+set smartindent               " 新しい行でスマートインデントを有効にする
+set relativenumber            " 相対行番号を表示する
+set tabstop=4                 " タブをスペース4つ分に設定
+set shiftwidth=4              " 自動インデントで使用するスペースの数
+
+" 表示設定
+set number              " 行番号を表示
+set cursorline          " カーソル行を強調表示
+set virtualedit=onemore " カーソルを行末の1文字分超えるように設定
+set smartindent         " スマートインデントを有効にする
+set showmatch           " 対応する括弧を強調表示
+set laststatus=2        " ステータスラインを常に表示
+set wildmode=list:longest " コマンドライン補完をリスト表示
+syntax enable           " シンタックスハイライトを有効にする
+colorscheme habamax
+
+" キーマッピング
+inoremap jj <Esc>       " インサートモードでjjを押すとEscにマップ
+
+" 括弧の自動補完
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
+
+set nobackup
+set noswapfile
+set noundofile
